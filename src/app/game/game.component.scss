@@ -31,29 +31,29 @@
 
 @keyframes pick-card-animation {
   0% {
-    transform: scale(1); // Start at normal size
-    opacity: 1; // Fully opaque
+    transform: scale(1); 
+    opacity: 1; 
   }
 
   50% {
-    transform: scale(1.5) translateY(-20px); // Enlarge and move up slightly
-    opacity: 0.95; // Slightly transparent
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); // Add a subtle glow/shadow
+    transform: scale(1.5) translateY(-20px); 
+    opacity: 0.95; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
   }
 
   100% {
-    transform: scale(1.3) translateX(120px) translateY(-180px) rotate(-10deg); // Return to normal size
-    opacity: 1; // Fully opaque
+    transform: scale(1.3) translateX(120px) translateY(-180px) rotate(-10deg);
+    opacity: 1; 
   }
 }
 
 .pick-card {
-  animation: pick-card-animation 500ms ease-in-out forwards; // Apply the animation
+  animation: pick-card-animation 500ms ease-in-out forwards; 
 }
 
 .played-card {
   right: 25px;
-  transform: scale(1.3) translateX(120px) translateY(-180px) rotate(-10deg); // Return to normal size
+  transform: scale(1.3) translateX(120px) translateY(-180px) rotate(-10deg); 
 
 }
 

@@ -3,9 +3,6 @@ import { Game } from 'src/models/game';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
 import { MatDialog } from '@angular/material/dialog';
 
-
-
-
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
@@ -18,7 +15,6 @@ export class GameComponent {
   pickCardAnimation = false;
   game: Game = new Game();
 
-
   ngOnInit(): void {
     this.newGame();
   }
@@ -28,7 +24,7 @@ export class GameComponent {
   }
 
   takeCard() {
-    if (!this.pickCardAnimation) {
+    if (!this.pickCardAnimation && this.game.players.length > 1) {
       this.currentCard = this.game.stack.pop() ?? 'The stack is empty!';
       this.pickCardAnimation = true;
       this.game.currentPlayer++;
@@ -40,6 +36,9 @@ export class GameComponent {
       },
         500);
     }
+    else {
+      this.openDialog();
+  }
   }
 
   openDialog(): void {
