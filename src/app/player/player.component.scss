@@ -1,0 +1,38 @@
+.player {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;          // Add some padding
+    border-bottom-left-radius: 10px;         // Rounded corners
+    border-top-left-radius: 10px;         // Rounded corners
+    background-color: #ffffffb3;   // Subtle background
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); // Add a shadow
+  
+    img {
+      width: 50px;                // Set image size
+      height: 50px;
+      border-radius: 50%;         // Make image circular
+      margin-right: 15px;         // Add space between image and name
+      object-fit: cover;           // Ensure image covers the circular area without distortion
+    }
+  
+    span {
+      font-weight: bold;           // Make name bold
+      font-size: 1.2rem;         // Increase font size slightly
+    }
+  
+    &:hover {                   // Add hover effect
+      background-color: #e0e0e0; // Slightly darker background on hover
+      transform: translateY(-2px); // Subtle lift on hover
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); // More pronounced shadow on hover
+      cursor: pointer;           // Indicate interactivity
+    }
+  }
+
+  .player-active{
+    background-color: #f8f8f8 !important; // Slightly darker background on hover
+    transform: translateY(-2px); // Subtle lift on hover
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); 
+    padding: 5px 10px; 
+  }
+  
