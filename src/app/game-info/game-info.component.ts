@@ -25,7 +25,7 @@ export class GameInfoComponent implements OnInit, OnChanges {
   title: string = '';
   description: string = '';
   @Input() card: string = '';
-
+  @Input() playerCount: number = 0;
   constructor() { }
 
   ngOnInit(): void {
@@ -40,5 +40,5 @@ export class GameInfoComponent implements OnInit, OnChanges {
 
   }
   }
+  }
 
-}

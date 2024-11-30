@@ -1,4 +1,12 @@
-<mat-card>
+<mat-card *ngIf="playerCount >= 2; else notEnoughPlayers">
     <mat-card-title> {{ card ? title : 'Please pick a card' }} </mat-card-title>
     <mat-card-content> {{ card ? description : 'Please click on the card stack to select the next card' }} </mat-card-content>
 </mat-card>
+  
+  <ng-template #notEnoughPlayers>
+    <mat-card>
+      <mat-card-title class="error-message" >Not Enough Players</mat-card-title>
+      <mat-card-content class="error-message" >Please add at least two players to start the game.</mat-card-content>
+    </mat-card>
+  </ng-template>
+  

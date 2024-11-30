@@ -7,21 +7,21 @@
     <div class="card-stack">
 
         <img *ngFor="let c of [0,1,2,3];  let i = index ; " [ngStyle]="{'right.px' : i  * 5}"
-            src="./../../assets/img/cards/cover_card.png" alt="">
+            src="assets/img/cards/cover_card.png" alt="">
 
-        <img (click)="takeCard()" class="top-card" style="right: 25px;" src="./../../assets/img/cards/cover_card.png"
+        <img (click)="takeCard()" class="top-card" style="right: 25px;" src="assets/img/cards/cover_card.png"
             alt="">
 
         <img *ngFor="let playedCard of game.playedCards" class="played-card"
-            src="./../../assets/img/cards/{{ playedCard }}.png" alt="">
+            src="assets/img/cards/{{ playedCard }}.png" alt="">
 
         <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 25px;"
-            src="./../../assets/img/cards/{{ currentCard }}.png" alt="">
+            src="assets/img/cards/{{ currentCard }}.png" alt="">
     </div>
 
 </div>
 
-<app-game-info [card] = "currentCard" class="game-info"></app-game-info>
+<app-game-info [card] = "currentCard" [playerCount]="game.players.length" class="game-info"></app-game-info>
 
 <button mat-fab class="btn-add " color="primary"(click)="openDialog()" >
     <mat-icon>add</mat-icon>
